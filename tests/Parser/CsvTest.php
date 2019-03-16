@@ -20,10 +20,16 @@ CSV;
         ];
 
         $csvParser = new Csv($strData);
+        $result = $csvParser->toArray();
         $this->assertEquals(
             $expected,
-            $csvParser->toArray(),
+            $result,
             'Csv parser falhou em converter a string para array'
+        );
+        $this->assertEquals(
+            $result,
+            $csvParser->toArray(),
+            'Csv parser mudou de valor quando não deveria ter mudado'
         );
     }
 
