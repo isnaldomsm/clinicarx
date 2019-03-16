@@ -32,6 +32,6 @@
             "@cs-check"
         ],
         "cs-check": "vendor/bin/phpcs --colors -p ./src ./tests",
-        "test": "vendor/bin/phpunit --testdox tests"
+        "test": "vendor/bin/phpunit -c phpunit.yml --testdox"
     }
 }
