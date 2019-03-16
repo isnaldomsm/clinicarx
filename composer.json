@@ -1,0 +1,14 @@
+{
+    "name": "rx/avaliacao",
+    "description": "Avaliação de conhecimentos em PHP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alysson Azevedo",
+            "email": "alysson@rxsaude.com.br"
+        }
+    ],
+    "require": {},
+    "require-dev": {}
+}
