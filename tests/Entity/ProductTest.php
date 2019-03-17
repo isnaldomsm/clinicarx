@@ -28,14 +28,12 @@ class ProductTest extends TestCase
 
     /**
      * @expectedException \Exception
+     * @expectedExceptionMessage The property "name" is required
      */
     public function testCreateNewProductWithoutNameFails()
     {
         $data = [];
         $product = new Product($data);
-
-        $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('The property "name" is required');
     }
 
     public function testIsAvailable()

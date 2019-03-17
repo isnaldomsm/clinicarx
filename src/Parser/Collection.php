@@ -26,10 +26,6 @@ class Collection
      */
     public function __construct(array $data, string $entityClass)
     {
-        if (!class_exists($entityClass)) {
-            $message = sprintf('Class "%s" does not exists', $entityClass);
-            throw new \Exception($message);
-        }
         $this->_entityClass = $entityClass;
         $dictionary = $this->getDictionary($entityClass);
 
@@ -64,7 +60,8 @@ class Collection
                 $reflection->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED)
             );
         } catch (\ReflectionException $e) {
-            $dictionary = [];
+            $message = sprintf('Class "%s" does not exists', $entityClass);
+            throw new \Exception($message);
         }
 
         return $dictionary;

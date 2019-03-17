@@ -63,4 +63,12 @@ class CollectionTest extends TestCase
         }
     }
 
+    /**
+     * @expectedException \Exception
+     * @expectedExceptionMessage Class "\Rx\ClassNotExists" does not exists
+     */
+    public function testCollectionFailsWhenClassDoNotExists()
+    {
+        $collection = new Collection([], '\Rx\ClassNotExists');
+    }
 }
