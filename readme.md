@@ -15,3 +15,7 @@ O desafio é fazer com que todos os testes do PHPUnit sejam bem sucedidos.
 - Converter um CSV ignorando linhas vazias
 - Converter um CSV retirando espaços no final de cada célula
 
+
+**\Rx\Parser\Collection**:  
+
+- Fazer com que a classe fique iterável
