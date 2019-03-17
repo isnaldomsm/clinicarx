@@ -4,7 +4,7 @@ namespace Rx\Test\integration;
 
 use Cake\Datasource\ConnectionManager;
 use PHPUnit\Framework\TestCase;
-use Rx\Entity\Product;
+use Rx\Parser\Entity\Product;
 use Rx\Parser\Collection;
 use Rx\Parser\Csv;
 

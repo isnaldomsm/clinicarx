@@ -1,6 +1,6 @@
 <?php
 
-namespace Rx\Entity;
+namespace Rx\Parser\Entity;
 
 
 class Product

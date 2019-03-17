@@ -2,7 +2,7 @@
 
 namespace Rx\Test\Parser;
 
-use Rx\Entity\Product;
+use Rx\Parser\Entity\Product;
 use Rx\Parser\Collection;
 use PHPUnit\Framework\TestCase;
 

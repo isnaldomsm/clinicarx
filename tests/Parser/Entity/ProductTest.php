@@ -2,7 +2,7 @@
 
 namespace Rx\Test\Entity;
 
-use Rx\Entity\Product;
+use Rx\Parser\Entity\Product;
 use PHPUnit\Framework\TestCase;
 
 class ProductTest extends TestCase
