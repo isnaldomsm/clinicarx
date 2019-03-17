@@ -18,7 +18,7 @@
         "mobiledetect/mobiledetectlib": "2.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7",
+        "phpunit/phpunit": "^6",
         "squizlabs/php_codesniffer": "^3.4",
         "cakephp/bake": "^1.9.0",
         "cakephp/cakephp-codesniffer": "^3.0",
@@ -47,6 +47,6 @@
         ],
         "cs-check": "vendor/bin/phpcs --colors -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/ tests/",
         "cs-fix": "vendor/bin/phpcbf --colors --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/ tests/",
-        "test": "vendor/bin/phpunit -c phpunit.yml --testdox"
+        "test": "vendor/bin/phpunit --testdox"
     }
 }

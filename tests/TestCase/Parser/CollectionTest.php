@@ -27,7 +27,7 @@ class CollectionTest extends TestCase
         ];
         $collection = new Collection($data, Product::class);
 
-        $this->assertIsIterable($collection);
+        $this->assertTrue(is_iterable($collection));
     }
 
     public function testNewProductsCollectionWithHeader()
