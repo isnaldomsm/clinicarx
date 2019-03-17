@@ -29,6 +29,20 @@ e qualquer outra configuração relevante para a realização das tarefas.
 
 Lista de correções e melhorias necessárias.
 
+**\Rx\Auth\AccessControl**:
+
+- Implementar todas as funções de desabilitar atributos.
+
+      $access->disableAdminRead();
+      $access->disableAdminWrite();
+      $access->disableAdminExecute();
+      $access->disableUserRead();
+      $access->disableUserWrite();
+      $access->disableUserExecute();
+      $access->disableGuestRead();
+      $access->disableGuestWrite();
+      $access->disableGuestExecute();
+
 **\Rx\Parser\Csv**:  
 
 - Converter um CSV usando `;` como separador de colunas
