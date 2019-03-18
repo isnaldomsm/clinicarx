@@ -12,20 +12,22 @@ O desafio é fazer com que todos os testes do PHPUnit sejam bem sucedidos.
 Requisitos:
 
 * [Git](https://git-scm.com/)
-* [PHP 7.2](http://php.net/) (também funciona com versões mais recentes) e os 
-seguintes módulos:
-  * `php7.2-json`
-  * `php7.2-mbstring`
-  * `php7.2-sqlite3`
-  * `php7.2-xml`
-  * `php-xdebug`
+* [PHP 7.2](http://php.net/)
 * [Composer](https://getcomposer.org/doc/00-intro.md)
+
+Para instalar as dependências no linux, use os comandos abaixo:
+
+```bash
+sudo apt-get install git php7.2-cli php7.2-intl php7.2-json \
+                     php7.2-mbstring php7.2-sqlite3 php7.2-xml \
+                     php7.2-zip php-xdebug composer
+```
 
 O candidato deverá clonar o repositório e, na pasta do projeto, executar o 
 comando:
 
-```
-git clone https://github.com/rxsaude/avaliacao.git
+```bash
+git clone https://bitbucket.org/rxsaude/avaliacao.git
 cd avaliacao
 composer install
 ```
