@@ -45,7 +45,7 @@ CSV;
             ['a2', 'b2', 'c2', 'd2', 'e2'],
         ];
 
-        $csvParser = new Csv($strData);
+        $csvParser = new Csv($strData, ';');
         $this->assertEquals(
             $expected,
             $csvParser->toArray(),
@@ -62,14 +62,28 @@ a2,b2,c2,d2,e2
 
 CSV;
 
-        $expected = [
+        $expectedWithSkippinEmptyLines = [
             ['a1', 'b1', 'c1', 'd1', 'e1'],
             ['a2', 'b2', 'c2', 'd2', 'e2'],
         ];
 
         $csvParser = new Csv($strData);
         $this->assertEquals(
-            $expected,
+            $expectedWithSkippinEmptyLines,
+            $csvParser->toArray(),
+            'Csv parser falhou em converter a string para array'
+        );
+
+        $expectedWithoutSkippinEmptyLines = [
+            ['a1', 'b1', 'c1', 'd1', 'e1'],
+            [''],
+            ['a2', 'b2', 'c2', 'd2', 'e2'],
+            [''],
+        ];
+
+        $csvParser = new Csv($strData, ',', false);
+        $this->assertEquals(
+            $expectedWithoutSkippinEmptyLines,
             $csvParser->toArray(),
             'Csv parser falhou em converter a string para array'
         );
@@ -79,16 +93,27 @@ CSV;
     public function testParseCsvTrimmingFields()
     {
         $strData = <<<CSV
-a1 ,b1 , c1, d1 
+a1,b1 , c1, d1 
 CSV;
 
-        $expected = [
+        $expectedWithTrimmingField = [
             ['a1', 'b1', 'c1', 'd1'],
         ];
 
         $csvParser = new Csv($strData);
         $this->assertEquals(
-            $expected,
+            $expectedWithTrimmingField,
+            $csvParser->toArray(),
+            'Csv parser falhou em converter a string para array'
+        );
+
+        $expectedWithoutTrimmingField = [
+            ['a1', 'b1 ', ' c1', ' d1 '],
+        ];
+
+        $csvParser = new Csv($strData, ',', true, false);
+        $this->assertEquals(
+            $expectedWithoutTrimmingField,
             $csvParser->toArray(),
             'Csv parser falhou em converter a string para array'
         );
