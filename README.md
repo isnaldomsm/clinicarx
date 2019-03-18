@@ -1,5 +1,7 @@
 # Avaliação de conhecimentos em PHP
 
+[![Build Status](https://img.shields.io/travis/rxsaude/avaliacao/master.svg?style=flat-square)](https://travis-ci.org/rxsaude/avaliacao)
+
 Este projeto busca avaliar conhecimentos de candidatos à vagas para trabalhar no
 clinicarx.
 
@@ -10,7 +12,12 @@ O desafio é fazer com que todos os testes do PHPUnit sejam bem sucedidos.
 Requisitos:
 
 * [Git](https://git-scm.com/)
-* [PHP 7.2](http://php.net/) ou mais recente
+* [PHP 7.2](http://php.net/) (também funciona com versões mais recentes) e os seguintes módulos:
+  * `php7.2-json`
+  * `php7.2-mbstring`
+  * `php7.2-sqlite3`
+  * `php7.2-xml`
+  * `php-xdebug`
 * [Composer](https://getcomposer.org/doc/00-intro.md)
 
 O candidato deverá clonar o repositório e, na pasta do projeto, executar o 
@@ -21,6 +28,10 @@ git clone https://github.com/rxsaude/avaliacao.git
 cd avaliacao
 composer install
 ```
+
+Para que os testes envolvendo models e controllers funcionem, é necessário que o
+o banco de dados esteja configurado corretamente. O banco de dados escolhido 
+para este projeto é o Sqlite3, devido à simplicidade dele.
 
 Leia e edite o arquivo `config/app.php` e defina a propriedade `'Datasources'` 
 e qualquer outra configuração relevante para a realização das tarefas.

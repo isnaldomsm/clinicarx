@@ -1,6 +1,6 @@
 <?php
 
-namespace Rx\Test\Entity;
+namespace Rx\Test\Parser\Entity;
 
 use Rx\Parser\Entity\Product;
 use PHPUnit\Framework\TestCase;
