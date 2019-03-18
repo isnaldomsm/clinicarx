@@ -12,7 +12,8 @@ O desafio é fazer com que todos os testes do PHPUnit sejam bem sucedidos.
 Requisitos:
 
 * [Git](https://git-scm.com/)
-* [PHP 7.2](http://php.net/) (também funciona com versões mais recentes) e os seguintes módulos:
+* [PHP 7.2](http://php.net/) (também funciona com versões mais recentes) e os 
+seguintes módulos:
   * `php7.2-json`
   * `php7.2-mbstring`
   * `php7.2-sqlite3`
@@ -39,6 +40,12 @@ e qualquer outra configuração relevante para a realização das tarefas.
 ## Tarefas
 
 Lista de correções e melhorias necessárias.
+
+**\Rx\Controller\Articles**:
+
+- Filtrar os resultados da paginação de Artigos para que não sejam retornados 
+artigos não publicados.
+
 
 **\Rx\Auth\AccessControl**:
 

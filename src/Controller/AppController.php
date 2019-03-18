@@ -36,6 +36,7 @@ class AppController extends Controller
      * e.g. `$this->loadComponent('Security');`
      *
      * @return void
+     * @throws
      */
     public function initialize()
     {
@@ -44,7 +45,6 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
         ]);
-        $this->loadComponent('Flash');
 
         /*
          * Enable the following component for recommended CakePHP security settings.

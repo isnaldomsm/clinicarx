@@ -50,6 +50,16 @@ class ArticlesFixture extends TestFixture
                 'created' => '2019-03-19 01:12:07',
                 'modified' => '2019-03-19 01:12:07'
             ],
+            [
+                'id' => 2,
+                'user_id' => 1,
+                'title' => 'Segundo post não publicado',
+                'slug' => 'segundo-post',
+                'body' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+                'published' => false,
+                'created' => '2019-03-19 01:12:07',
+                'modified' => '2019-03-19 01:12:07'
+            ],
         ];
         parent::init();
     }

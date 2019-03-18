@@ -14,6 +14,6 @@ class AppControllerTest extends TestCase
         $controller = new AppController();
 
         $components = $controller->components()->loaded();
-        $this->assertEquals(['RequestHandler', 'Flash'], $components);
+        $this->assertEquals(['RequestHandler'], $components);
     }
 }
