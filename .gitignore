@@ -1,3 +1,7 @@
+# Bundles dos candidatos #
+##########################
+/bundles/*
+
 # Framework specific files #
 ##########################
 /config/app.php
