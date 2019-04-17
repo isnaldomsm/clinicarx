@@ -91,7 +91,7 @@ Quando todos os 14 testes estiverem passando pelo PHPUnit, o repositório deve
 ser encapsulado num arquivo bundle.
 
 ```
-git bundle create avaliacao.bundle master
+git bundle create rx_avaliacao.bundle master
 ```
 
 O arquivo gerado (`rx_avaliacao.bundle`) deve ser enviado para o email: 
