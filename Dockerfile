@@ -51,8 +51,7 @@ RUN apk --no-cache add \
     && php composer-setup.php --install-dir=/usr/bin --filename=composer \
     && php -r "unlink('composer-setup.php');" \
     # Enable X-Debug
-    && sed -i 's/\;z/z/g' /etc/php7/conf.d/xdebug.ini \
-    && php -m | grep -i xdebug
+    && sed -i 's/\;z/z/g' /etc/php7/conf.d/xdebug.ini
 
 ONBUILD RUN \
     { \
@@ -61,9 +60,9 @@ ONBUILD RUN \
 
 VOLUME ["/app"]
 WORKDIR /app
-COPY ./composer.json ./vendor /app/
+COPY ./composer.json /app/
 
-RUN composer install --prefer-source --no-interaction
-
-ENTRYPOINT ["/app/vendor/bin/phpunit"]
-CMD ["--help"]
+#RUN composer install --prefer-source --no-interaction
+#
+#ENTRYPOINT ["/vendor/bin/phpunit"]
+#CMD ["--help"]
