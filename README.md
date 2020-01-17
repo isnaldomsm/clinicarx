@@ -7,29 +7,22 @@ clinicarx.
 
 O desafio é fazer com que todos os testes do PHPUnit sejam bem sucedidos.
 
-## Instalação
+## Instalação via `docker`
 
-Requisitos:
+
+## Instalação via `apt`
+
+Pré-requisitos:
 
 * [Git](https://git-scm.com/)
-* [PHP 7.2](http://php.net/)
-* [Composer](https://getcomposer.org/doc/00-intro.md)
+* [Docker](https://docs.docker.com/)
 
-Para instalar as dependências no linux, use os comandos abaixo:
-
-```bash
-sudo apt-get install git php7.2-cli php7.2-intl php7.2-json \
-                     php7.2-mbstring php7.2-sqlite3 php7.2-xml \
-                     php7.2-zip php-xdebug composer
-```
-
-O candidato deverá clonar o repositório e, na pasta do projeto, executar o 
-comando:
+O candidato deverá clonar o repositório e, na pasta do projeto, gerar a build do docker:
 
 ```bash
 git clone https://bitbucket.org/rxsaude/avaliacao.git
 cd avaliacao
-composer install
+docker build --rm -t rx/avaliacao .
 ```
 
 Para que os testes envolvendo models e controllers funcionem, é necessário que o
@@ -38,6 +31,14 @@ para este projeto é o Sqlite3, devido à simplicidade dele.
 
 Leia e edite o arquivo `config/app.php` e defina a propriedade `'Datasources'` 
 e qualquer outra configuração relevante para a realização das tarefas.
+
+## Executando os testes
+
+Na pasta do projeto, execute o comando:
+
+```
+docker run -v $(pwd):/app rx/avaliacao -c phpunit.xml.dist --testdox tests
+```
 
 ## Tarefas
 
@@ -73,14 +74,6 @@ artigos não publicados.
 **\Rx\Parser\Collection**:  
 
 - Fazer com que a classe fique iterável
-
-## Executando os testes
-
-Na pasta do projeto, execute o comando:
-
-```
-vendor/bin/phpunit --testdox tests
-```
 
 ## Conclusão
 
