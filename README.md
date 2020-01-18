@@ -19,7 +19,7 @@ O candidato deverá clonar o repositório e, na pasta do projeto, gerar a build 
 
 ```bash
 git clone git@bitbucket.org:rxsaude/avaliacao-php.git
-cd avaliacao
+cd avaliacao-php
 docker-compose run install
 ```
 
