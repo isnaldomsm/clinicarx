@@ -18,7 +18,7 @@ Pré-requisitos:
 O candidato deverá clonar o repositório e, na pasta do projeto, gerar a build do docker:
 
 ```bash
-git clone https://bitbucket.org/rxsaude/avaliacao.git
+git clone git@bitbucket.org:rxsaude/avaliacao-php.git
 cd avaliacao
 docker-compose run install
 ```
