@@ -62,7 +62,4 @@ VOLUME ["/app"]
 WORKDIR /app
 COPY ./composer.json /app/
 
-#RUN composer install --prefer-source --no-interaction
-#
-#ENTRYPOINT ["/vendor/bin/phpunit"]
-#CMD ["--help"]
+CMD /app/vendor/bin/phpunit -c phpunit.xml.dist --testdox tests

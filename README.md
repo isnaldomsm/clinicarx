@@ -9,21 +9,18 @@ O desafio é fazer com que todos os testes do PHPUnit sejam bem sucedidos.
 
 ## Instalação via `docker`
 
-
-## Instalação via `apt`
-
 Pré-requisitos:
 
-* [Git](https://git-scm.com/)
-* [Docker](https://docs.docker.com/)
+* [git](https://git-scm.com/)
+* [docker](https://docs.docker.com/install/#server)
+* [docker-compose](https://docs.docker.com/compose/install/)
 
 O candidato deverá clonar o repositório e, na pasta do projeto, gerar a build do docker:
 
 ```bash
 git clone https://bitbucket.org/rxsaude/avaliacao.git
 cd avaliacao
-docker build --rm -t rx/avaliacao .
-docker run -v $(pwd):/app rx/avaliacao /usr/bin/composer install  --prefer-source --no-interaction
+docker-compose run install
 ```
 
 Para que os testes envolvendo models e controllers funcionem, é necessário que o
@@ -38,7 +35,7 @@ e qualquer outra configuração relevante para a realização das tarefas.
 Na pasta do projeto, execute o comando:
 
 ```
-docker run -v $(pwd):/app -v /app/vendor rx/avaliacao /app/vendor/bin/phpunit -c phpunit.xml.dist --testdox tests
+docker-compose run phpunit
 ```
 
 ## Tarefas
