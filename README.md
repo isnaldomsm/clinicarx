@@ -1,7 +1,5 @@
 # Avaliação de conhecimentos em PHP
 
-[![Build Status](https://img.shields.io/travis/rxsaude/avaliacao/master.svg?style=flat-square)](https://travis-ci.org/rxsaude/avaliacao)
-
 Este projeto busca avaliar conhecimentos de candidatos à vagas para trabalhar no
 clinicarx.
 
@@ -28,7 +26,8 @@ o banco de dados esteja configurado corretamente. O banco de dados escolhido
 para este projeto é o Sqlite3, devido à simplicidade dele.
 
 Leia e edite o arquivo `config/app.php` e defina a propriedade `'Datasources'` 
-e qualquer outra configuração relevante para a realização das tarefas.
+e qualquer outra configuração relevante para a realização das tarefas.  
+Todos os commits podem ser feitos diretamente no branch `master`
 
 ## Executando os testes
 
@@ -86,4 +85,4 @@ git bundle create rx_avaliacao.bundle master
 ```
 
 O arquivo gerado (`rx_avaliacao.bundle`) deve ser enviado para o email: 
-[alysson@rxsaude.com.br](mailto:alysson@rxsaude.com.br)
+[alysson@clinicarx.com.br](mailto:alysson@clinicarx.com.br)
