@@ -1,0 +1,47 @@
+stages:
+  - tests
+
+1-smoke:
+  stage: tests
+  tags:
+    - shell
+  only:
+    - master
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - echo running smoke test || true
+
+2-unit:
+  stage: tests
+  tags:
+    - shell
+  only:
+    - master
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - echo running unit test || true
+
+3-style:
+  stage: tests
+  tags:
+    - shell
+  only:
+    - master
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - echo running checkstyle || true
+
+4-smell:
+  stage: tests
+  tags:
+    - shell
+  only:
+    - master
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - echo running codesmell || true
+
