@@ -1,0 +1,18 @@
+version: '2'
+services:
+  install:
+    volumes:
+      - .:/app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: '/usr/bin/composer install  --prefer-source --no-interaction'
+
+  phpunit:
+    volumes:
+      - .:/app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - install
