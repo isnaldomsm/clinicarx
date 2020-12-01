@@ -16,7 +16,7 @@ Pré-requisitos:
 O candidato deverá clonar o repositório e, na pasta do projeto, gerar a build do docker:
 
 ```bash
-git clone git@clinicarx.dev:challenge/php.git
+git clone https://clinicarx.dev/challenge/php.git
 cd avaliacao-php
 docker-compose run install
 ```
