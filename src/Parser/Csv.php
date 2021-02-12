@@ -46,7 +46,14 @@ class Csv
         // A função str_getcsv falha em converter corretamente
         // quando o CSV possui quebras de linhas dentro de uma das células.
         // TODO: Substituir o método abaixo por um que funcione corretamente
-        $this->_data = array_map('str_getcsv', explode(PHP_EOL, $this->_text));
+        $csv = file_get_contents( $this->_text);
+        $lines = explode(PHP_EOL, $csv);
+        $array = array();
+        foreach ($lines as $line) {
+            $array[] = str_getcsv($line);
+        }
+
+        $this->_data = array_map('str_getcsv', explode(PHP_EOL, $array));
 
         return $this->_data;
     }
