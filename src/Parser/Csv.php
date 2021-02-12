@@ -43,7 +43,7 @@ class Csv
         if (is_array($this->_data))
             return $this->_data;
 
-        // A função str_getcsv falha em converter corretamente
+        // A função str_getcsv falha em converter corretamente d
         // quando o CSV possui quebras de linhas dentro de uma das células.
         // TODO: Substituir o método abaixo por um que funcione corretamente
         $csv = file_get_contents( $this->_text);
