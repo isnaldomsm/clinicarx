@@ -25,7 +25,7 @@ class AccessControl
     public function __construct()
     {
         $this->_permissions = self::ADMIN_READ | self::ADMIN_WRITE |
-            self::ADMIN_EXECUTE | self::USER_READ | self::GUEST_READ;
+            self::ADMIN_EXECUTE | self::USER_READ | self::GUEST_READ | self::NONE;
     }
 
     public function toInt()
@@ -35,12 +35,14 @@ class AccessControl
 
     public function enableAdminRead()
     {
-        $this->_permissions |= self::ADMIN_READ;
+         $this->_permissions |= self::ADMIN_READ;
     }
 
     public function disableAdminRead()
     {
+         $this->_permissions |= self::NONE;
         //TODO: Implementar disableAdminRead
+        
     }
 
     public function enableAdminWrite()
@@ -50,6 +52,8 @@ class AccessControl
 
     public function disableAdminWrite()
     {
+        $this->_permissions |= self::NONE;
+        //$access->disableAdminWrite();
         //TODO: Implementar disableAdminWrite
     }
 
@@ -61,6 +65,7 @@ class AccessControl
     public function disableAdminExecute()
     {
         //TODO: Implementar disableAdminExecute
+         $this->_permissions |= self::NONE;
     }
 
     public function enableUserRead()
@@ -71,6 +76,8 @@ class AccessControl
     public function disableUserRead()
     {
         //TODO: Implementar disableUserRead
+          $this->_permissions |= self::NONE;
+        
     }
 
     public function enableUserWrite()
@@ -81,6 +88,7 @@ class AccessControl
     public function disableUserWrite()
     {
         //TODO: Implementar disableUserWrite
+        $this->_permissions |= self::NONE;
     }
 
     public function enableUserExecute()
@@ -91,6 +99,7 @@ class AccessControl
     public function disableUserExecute()
     {
         //TODO: Implementar disableUserExecute
+       // $access->disableUserExecute();
     }
 
     public function enableGuestRead()
@@ -101,6 +110,7 @@ class AccessControl
     public function disableGuestRead()
     {
         //TODO: Implementar disableGuestRead
+         $this->_permissions |= self::NONE;
     }
 
     public function enableGuestWrite()
@@ -111,6 +121,7 @@ class AccessControl
     public function disableGuestWrite()
     {
         //TODO: Implementar disableGuestWrite
+        $this->_permissions |= self::NONE;
     }
 
     public function enableGuestExecute()
@@ -121,6 +132,7 @@ class AccessControl
     public function disableGuestExecute()
     {
         //TODO: Implementar disableGuestExecute
+         $this->_permissions |= self::NONE;
     }
 
     public function enableAll()

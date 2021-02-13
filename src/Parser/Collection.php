@@ -5,7 +5,9 @@ namespace Rx\Parser;
 /**
  * Class Collection
  * @package Rx\Parser
+ *
  */
+
 class Collection
 {
     /**

@@ -152,6 +152,11 @@ ServerRequest::addDetector('tablet', function ($request) {
  * locale specific date formats. For details see
  * @link https://book.cakephp.org/3.0/en/core-libraries/internationalization-and-localization.html#parsing-localized-datetime-data
  */
+if (Configure::read('debug')) {
+    Configure::write('DebugKit', ['forceEnable' => true]);
+   Plugin::load ('DebugKit', ['bootstrap' => true]);
+}
+
 Type::build('time')
     ->useImmutable();
 Type::build('date')
